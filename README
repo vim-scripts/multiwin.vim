@@ -1,0 +1,20 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1083
+
+This script manipulates noequalalways, splitbelow, winheight, winminheight, and laststatus to make each buffer (either loaded by command line or via :new) occupy its own window.  All inactive windows are minimized to only statuslines.  This gives the appearance of a Rolodex.  Simply click on a status line and that window is maximized.
+
+Note: once vim is loaded, you must use :new (or :split) to "add" a window to the list.  Using :e will change the buffer in the current window.
+
+This has same effect of using -o on the vim command line when you run vim with multiple filenames on the command line, or "Edit with single vim" context menu in Windows Explorer when multiple files are selected.
+
+This script will not run if vim is set to compatible or is in diff mode.
+
+You can disable the automatic-ness of this script by setting g:singlewin in your vimrc
+
+This script is compatible with vim 6.3 and 7.0. 
+
+I'd would like to give credit where credit is due:
+Antoine J. Mechelynck - the initial idea of playing with winheight and the other options
+Charles E. Campbell, Jr. - enlightening me on the use of sball
+Bram - for deflecting my attempts at sliding a patch in and making me think of alternate ways to trick vim into maximizing the current window.and for showing me eventhandler()
+Breadman - for showing me wincmd _
+
